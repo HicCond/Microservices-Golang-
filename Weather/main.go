@@ -130,7 +130,7 @@ func fetchWeatherHistoryFromDB(start time.Time, end time.Time) ([]Weather, error
 
 func fetchAndSaveCurrentWeather(city string) (*Weather, error) {
 	// Get weather data from the OpenWeatherMap API
-	apiKey := "7590217e7ebefcf015109eece5d0502b"
+	apiKey := ""
 	url := fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s", city, apiKey)
 	resp, err := http.Get(url)
 	if err != nil {
